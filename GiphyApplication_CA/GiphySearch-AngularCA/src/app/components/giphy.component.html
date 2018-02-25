@@ -1,0 +1,17 @@
+<form #addToLikeListForm="ngForm" (ngSubmit)="addToLikeList(addToLikeListForm)" class="container-fluid">
+  <div class="card" style="width: 40rem;">
+    <div class="card-body">
+      <input type="hidden" name="title" [value]="model.title"/>
+      <h5 class="card-title">{{model.title}}</h5>
+    <input type="hidden" name="userid" [value]="userid"/>
+    <input type="hidden" name="url" [value]="model.url"/>
+    <img class="card-img-top" [src]="model.url" alt="Card image cap">
+      <br/>
+      <div *ngIf="model.favorite != true">
+        <br/>
+        <button type="submit" class="btn btn-primary btn-block">Add To Favorite</button>
+      </div>
+    </div>
+  </div>
+</form>
+<br>
